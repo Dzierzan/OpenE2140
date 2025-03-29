@@ -839,6 +839,11 @@
 	Voiced@Static:
 		VoiceSet: StaticVoice
 		RequiresCondition: VehicleDisabled
+	# An actor can be captured by HCU-M.
+	CaptureManager:
+	Capturable:
+		Types: Vehicle
+		RequiresCondition: VehicleDisabled
 
 # Vehicles leave a husk when they're destroyed
 ^Husk:

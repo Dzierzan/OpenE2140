@@ -102,14 +102,6 @@ Actors:
 		Owner: UCS_AI
 		Location: 6,21
 		Facing: 768
-	Actor28: ed_vehicles_st01b
-		Owner: ED_Player
-		Facing: 384
-		Location: 16,18
-	Actor29: ed_vehicles_st01b
-		Owner: ED_Player
-		Location: 17,18
-		Facing: 896
 	Actor26: ed_vehicles_st01b
 		Owner: ED_Player
 		Facing: 384
@@ -158,10 +150,6 @@ Actors:
 		Owner: ED_Player
 		Facing: 384
 		Location: 27,9
-	Actor45: ucs_vehicles_big_mech
-		Owner: UCS_AI
-		Facing: 384
-		Location: 9,23
 	Actor46: ucs_vehicles_big_mech
 		Owner: UCS_AI
 		Location: 3,21
@@ -190,10 +178,6 @@ Actors:
 		Owner: UCS_AI
 		Location: 7,20
 		Facing: 134
-	Actor53: ucs_vehicles_t100
-		Owner: UCS_AI
-		Location: 9,21
-		Facing: 586
 	Actor54: ucs_vehicles_t100
 		Owner: UCS_AI
 		Facing: 384
@@ -424,5 +408,25 @@ Actors:
 		Owner: ED_Player
 		Facing: 384
 		Location: 29,7
+	Actor101: ucs_vehicles_big_mech
+		Owner: UCS_AI
+		Facing: 384
+		Location: 18,23
+	Actor102: ed_vehicles_ht34j
+		Owner: ED_Player
+		Facing: 384
+		Location: 21,17
+	Actor103: ed_vehicles_ht34j
+		Owner: ED_Player
+		Facing: 384
+		Location: 22,17
+	Actor104: ed_vehicles_ht34j
+		Owner: ED_Player
+		Facing: 384
+		Location: 23,17
+	Actor106: shared_vehicles_hcum
+		Owner: ED_Player
+		Facing: 384
+		Location: 20,17
 
 Rules: rules.yaml

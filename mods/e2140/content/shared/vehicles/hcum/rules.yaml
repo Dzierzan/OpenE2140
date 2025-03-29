@@ -44,6 +44,12 @@ shared_vehicles_hcum:
 		InvalidTargets: Structure
 	SpawnActorOnDeath:
 		Actor: shared_vehicles_hcum_husk
+	CaptureManager:
+	Captures:
+		CaptureTypes: Vehicle
+		ConsumedByCapture: False
+		SabotageCursor: repair
+		EnterCursor: repair
 	Encyclopedia:
 		Category: Shared - Vehicles
 		Order: 3
