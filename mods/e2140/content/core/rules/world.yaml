@@ -152,7 +152,7 @@ World:
 				MaxDensity: 10000
 	# Add support for rush protection
 	RushProtection:
-		RushProtectionTimeDefault: 0
+		RushProtectionTimeDefault: 10
 		DamageToViolatingUnits: 20
 		TicksBetweenDamageToViolatingUnits: 10
 		RushProtectionRange: 10240
@@ -191,3 +191,10 @@ EditorWorld:
 	WaterBaseAnnotationLayer:
 	# Custom support for Water Base.
 	WaterBaseEditor:
+	# Path Tiler tool.
+	TilingPathTool:
+		DefaultStart: Shore
+		DefaultInner: Shore
+		DefaultEnd: Shore
+	# Random map generator.
+	Inherits@MapGenerators: ^MapGenerators
