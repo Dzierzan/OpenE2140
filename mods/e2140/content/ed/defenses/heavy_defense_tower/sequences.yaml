@@ -5,7 +5,7 @@ ed_defenses_heavy_defense_tower:
 	damaged-idle:
 		Start: 1
 	turret:
-		Filename: turret_heavy_defense_tower.vspr
+		Filename: content/ed/defenses/heavy_defense_tower/turret_heavy_defense_tower_ed.png
 		Facings: -16
 
 ed_mcu_heavy_defense_tower:
