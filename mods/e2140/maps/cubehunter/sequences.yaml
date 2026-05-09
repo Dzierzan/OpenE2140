@@ -1,0 +1,7 @@
+cube:
+	idle:
+		Filename: maps/cubehunter/cube.png
+		Length: 10
+		Tick: 60
+		Offset: 0,0
+		ZOffset: -512
