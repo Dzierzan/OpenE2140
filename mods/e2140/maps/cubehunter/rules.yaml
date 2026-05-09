@@ -1,0 +1,142 @@
+World:
+	CrateSpawner:
+		CheckboxDisplayOrder: 1
+		CheckboxVisible: True
+		CheckboxLocked: True
+		CheckboxEnabled: True
+		CrateActors: heal_cube, spawn_cube
+		CrateActorShares: 10, 90
+		SpawnInterval: 75
+		InitialSpawnDelay: 0
+		ValidGround: Clear, ClearShore, Road, AsphaltRoad
+		ValidWater: Water
+		WaterChance: 0
+	-StartingUnits@ed_mcuonly:
+	-StartingUnits@ed_economy:
+	-StartingUnits@ed_light:
+	-StartingUnits@ed_heavy:
+	-StartingUnits@ucs_mcuonly:
+	-StartingUnits@ucs_economy:
+	-StartingUnits@ucs_light:
+	-StartingUnits@ucs_heavy:
+	StartingUnits@CrateHunter:
+		Class: light
+		ClassName: actor-world-startingunits-cubehunter-class-name
+		Factions: ed,ucs
+		BaseActor: shared_vehicles_hcum
+	MapOptions:
+		ShortGameCheckboxVisible: False
+		ShortGameCheckboxLocked: True
+		ShortGameCheckboxEnabled: False
+	MapStartingLocations:
+		SeparateTeamSpawnsCheckboxEnabled: False
+		SeparateTeamSpawnsCheckboxLocked: True
+		SeparateTeamSpawnsCheckboxVisible: False
+
+Player:
+	Shroud:
+		FogCheckboxLocked: True
+		FogCheckboxEnabled: False
+		FogCheckboxVisible: False
+		ExploredMapCheckboxLocked: True
+		ExploredMapCheckboxEnabled: True
+		ExploredMapCheckboxVisible: False
+	PlayerResources:
+		DefaultCashDropdownLocked: True
+		DefaultCashDropdownVisible: False
+		DefaultCash: 0
+	RushProtection:
+		RushProtectionTimeDropdownVisible: False
+	ResearchLimit:
+		Limit: 1
+	ModularBot@CrateHunter:
+		Name: bot-cube-hunter-name
+		Type: hunter
+	GrantConditionOnBotOwner@CubeHunter:
+		Condition: enable-cube-hunter-ai
+		Bots: hunter
+	CubePickupBotModule:
+		RequiresCondition: enable-cube-hunter-ai
+		ScanForCubesInterval: 10
+		EnemyAvoidanceRadius: 0
+
+^CoreWorld:
+	Locomotor@vehicle:
+		Crushes: infantry, mine, husk, cube
+	Locomotor@light_vehicle:
+		Crushes: mine, husk, cube
+	Locomotor@vehicleFastSand:
+		Crushes: infantry, mine, husk, cube
+	Locomotor@light_vehicleFastSand:
+		Crushes: mine, husk, cube
+
+cube:
+	Inherits: ^CoreVisibleActor
+	WithSpriteBody:
+	Interactable:
+		Bounds: 1024, 1024
+	Tooltip:
+		Name: meta-cube.name
+		GenericName: meta-cube.generic-name
+		ShowOwnerRow: false
+	Crate:
+		Duration: 6000
+		TerrainTypes: Clear, ClearShore, Road, AsphaltRoad
+		CrushClass: cube
+	MapEditorData:
+		Categories: System
+
+heal_cube:
+	Inherits: cube
+	RenderSprites:
+		Image: cube
+	HealActorsCrateAction:
+		Image:
+		Palette:
+	WithIdleOverlay:
+		Image: healing
+		Sequence: idle
+		Palette:
+		IsDecoration: True
+		Offset: -255,-32,0
+
+spawn_cube:
+	Inherits: cube
+	RenderSprites:
+		Image: cube
+	GiveUnitCrateAction@TigerAssault:
+		Units: ucs_vehicles_tiger_assault
+		ValidFactions: ucs
+		SelectionShares: 10
+		Image:
+		Palette:
+	GiveUnitCrateAction@Spider:
+		Units: ucs_vehicles_spider
+		ValidFactions: ucs
+		SelectionShares: 10
+		Image:
+		Palette:
+	GiveUnitCrateAction@SpiderII:
+		Units: ucs_vehicles_spider_ii
+		ValidFactions: ucs
+		SelectionShares: 10
+		Image:
+		Palette:
+	GiveUnitCrateAction@HT30LR:
+		Units: ed_vehicles_ht30lr
+		ValidFactions: ed
+		SelectionShares: 10
+		Image:
+		Palette:
+	GiveUnitCrateAction@HT33R:
+		Units: ed_vehicles_ht33r
+		ValidFactions: ed
+		SelectionShares: 10
+		Image:
+		Palette:
+	GiveUnitCrateAction@HT34J:
+		Units: ed_vehicles_ht34j
+		ValidFactions: ed
+		SelectionShares: 10
+		Image:
+		Palette:
