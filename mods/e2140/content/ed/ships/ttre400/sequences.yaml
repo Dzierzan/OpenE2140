@@ -1,0 +1,25 @@
+ed_ships_ttre400:
+	idle:
+		Filename: content/ed/ships/ttre400/ship_ttre400_ed.png
+		Facings: -16
+	move:
+		Filename: content/ed/ships/ttre400/ship_ttre400_ed.png
+		Facings: -16
+	icon:
+		Filename: content/ed/ships/ttre400/ship_ttre400_icon_ed.png
+	# TODO: Enable after PR #20705 is merged in OpenRA
+	#icon-ucs:
+	#	Filename: SPRI0.MIX
+	#	Start: 158
+
+ed_ships_ttre400_husk:
+	idle:
+		Filename: ship_ttre_400_husk.vspr
+		Facings: -16
+		ZOffset: -512
+
+# TODO: remove after PR #20705
+ed_ships_ttre400.ucs:
+	Inherits: ed_ships_ttre400
+	icon:
+		Filename: content/ed/ships/ttre400/ship_ttre400_icon_ucs.png
