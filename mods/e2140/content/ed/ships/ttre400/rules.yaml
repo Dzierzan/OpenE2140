@@ -1,0 +1,63 @@
+ed_ships_ttre400:
+	Inherits: ^EdShip
+	Tooltip:
+		Name: TTRE 400 (ED)
+	Valued:
+		Cost: 700
+	Buildable:
+		IconPalette:
+		Queue: Ship.ED
+		BuildDuration: 125
+		BuildPaletteOrder: 20
+		Prerequisites: AiMine
+	Selectable:
+		Bounds: 1104, 944, 0, 0
+	Health:
+		HP: 260
+	Mobile:
+		Speed: 50
+	RevealsShroud:
+		Range: 2c896
+	Minelayer:
+		Mine: shared_misc_watermine
+		AmmoPoolName: Mines
+		Voice: Unload
+		DeployCursor: waterMinePlace
+		AbilityCursor: waterMinePlace
+	MineImmune:
+	AmmoPool:
+		Name: Mines
+		Armaments: WeaponMines
+		Ammo: 5
+	ReloadAmmoPool:
+		AmmoPool: Mines
+		Delay: 500
+		Count: 1
+	Rearmable:
+		RearmActors:
+		AmmoPools: Mines
+	DetectCloaked:
+		Range: 4c896
+		DetectionTypes: WaterMine
+	WithAmmoPipsDecoration:
+		FullSequence: pip-grey
+		Palette:
+		PipStride: 6,0
+		Margin: 5,5
+		RequiresSelection: True
+	SpawnActorOnDeath:
+		Actor: ed_ships_ttre400_husk
+	Encyclopedia:
+		Category: ED - Ships
+		Order: 3
+		Animation: DATABASE/BT14.FLC
+		Title: TTRE 400 - Mine layer
+		Armor: Medium
+		Armament: Water mines
+		Description: The TTR is a fast mine layer which can safeguard territories effectively from enemy ships and submarines by laying and moving water mines.\n\nThe only armament a TTR 400 carries are its mines, making it an easy target for the enemy. It’s only defense is to retreat, dropping mines in the water as it goes.
+
+ed_ships_ttre400_husk:
+	Inherits@1: ^Husk
+	Inherits@2: ^HuskBurnsBigFire
+	Tooltip:
+		Name: Husk (TTRE 400 ED)
