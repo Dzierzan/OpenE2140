@@ -1,0 +1,44 @@
+shared_buildings_gate_horizontal:
+	Inherits: ^CoreVisibleActor
+	Tooltip:
+		Name: Gate
+	Health:
+		HP: 1000
+	Building:
+		Dimensions: 2,1
+		Footprint: xx
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Circle
+			Radius: 512
+	MapEditorData:
+		Categories: Wall
+	Interactable:
+	BlocksProjectiles:
+	Armor:
+		Type: building
+	Targetable:
+		TargetTypes: Ground, Structure
+	Targetable@NoAutoAttack:
+		TargetTypes: NoAutoAttack
+	OwnerLostAction:
+		Action: Kill
+	UpdatesPlayerStatistics:
+		AddToAssetsValue: false
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	FireWarheadsOnDeath:
+		Weapon: WallExplosion
+		EmptyWeapon: WallExplosion
+	-HiddenUnderFog:
+	FrozenUnderFog:
+	Gate:
+		OpeningSound: gate-in.wav
+		ClosingSound: gate-out.wav
+	WithGateSpriteBody:
+		OpenSequence: open
+	LineBuildNode:
+	#GrantConditionOnLineBuildConnection:
+	#	Edges: -1,0, 3,0
+	#	FirstCondition: left
+	#	LastCondition: right	

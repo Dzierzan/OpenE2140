@@ -1,0 +1,16 @@
+shared_buildings_gate_horizontal:
+	Defaults:
+		Filename: content/shared/misc/gate/gate_horizontal.png
+		Offset: 1,0
+	idle:
+		Length: 14
+	damaged-idle:
+		Length: 14
+	open:
+		Start: 13
+		ZRamp: 1
+		ZOffset: -3036
+	damaged-open:
+		Start: 13
+		ZRamp: 1
+		ZOffset: -3036

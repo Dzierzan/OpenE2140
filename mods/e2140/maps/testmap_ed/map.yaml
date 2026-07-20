@@ -423,5 +423,14 @@ Actors:
 		Owner: ED_Player
 		Facing: 384
 		Location: 29,7
+	Actor0: shared_buildings_gate_horizontal
+		Owner: ED_Player
+		Location: 20,19
+	Actor1: shared_buildings_wall
+		Owner: ED_Player
+		Location: 19,19
+	Actor2: shared_buildings_wall
+		Owner: ED_Player
+		Location: 22,19
 
 Rules: rules.yaml
