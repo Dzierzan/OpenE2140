@@ -1,12 +1,8 @@
-Player:
-	-ConquestVictoryConditions:
-
 World:
 	LuaScript:
 		Scripts: script.lua
+	CameraOvalMover:
+		DegreesPerSecond: 5
+		OvalRadius: 19200, 28800, 0
 	-SpawnStartingUnits:
 	-MapStartingLocations:
-
-shared_buildings_mine:
-	ResourceMine:
-		CrateSize: 0
