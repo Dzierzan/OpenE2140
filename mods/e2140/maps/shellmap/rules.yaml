@@ -4,9 +4,24 @@ Player:
 World:
 	LuaScript:
 		Scripts: script.lua
+	CameraOvalMover:
+		DegreesPerSecond: 6
+		OvalRadius: 15000, 15000, 0
 	-SpawnStartingUnits:
 	-MapStartingLocations:
+	-StartGameNotification:
+	MusicPlaylist:
+		AllowMuteBackgroundMusic: true
+		DisableWorldSounds: true
 
-shared_buildings_mine:
-	ResourceMine:
-		CrateSize: 0
+^CoreConstruction:
+	DamageMultiplier@UNKILLABLE:
+		Modifier: 0
+
+shared_buildings_wall:
+	DamageMultiplier@UNKILLABLE:
+		Modifier: 0
+
+^shared_buildings_gate:
+	DamageMultiplier@UNKILLABLE:
+		Modifier: 0
